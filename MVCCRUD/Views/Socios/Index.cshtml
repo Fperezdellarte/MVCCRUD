@@ -1,30 +1,30 @@
 ﻿@model List<MVCCRUD.DTO.SocioDTO>
 
-	<h1>Socios</h1>
+<h1 class="text-white">Socios</h1>
 	<p>
-		<a asp-action="Create">Crear nuevo producto</a>
+	<a class="btn btn-info text-white" asp-action="Create">Crear nuevo producto</a>
 
 	</p>
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Nombre</th>
-				<th>FechaIngreso</th>
-				<th>Dni</th>
-			<th>Opciones administrador</th>
+			<th class="text-white">Nombre</th>
+			<th class="text-white">FechaIngreso</th>
+			<th class="text-white">Dni</th>
+			<th class="text-white">Opciones administrador</th>
 			</tr>
 		</thead>
 		<tbody>
 			@foreach (var item in Model)
 			{
 				<tr>
-					<td>
+				<td class="text-white">
 						@Html.DisplayFor(modelItem=>item.Nombre)
 					</td>
-				<td>
+				<td class="text-white">
 					@Html.DisplayFor(modelItem=>item.FechaIngreso)
 				</td>
-				<td>
+				<td class="text-white">
 					@Html.DisplayFor(modelItem=>item.Dni)
 				</td>
 				<td>
