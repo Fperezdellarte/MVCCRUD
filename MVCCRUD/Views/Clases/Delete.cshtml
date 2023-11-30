@@ -1,0 +1,26 @@
+﻿@model MVCCRUD.DTO.ClaseDTO
+
+<h1>Eliminar clase</h1>
+
+<div>
+	<h4>Clase</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Nombre)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Nombre)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Profesor)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.DiaClase)
+		</dd>
+	</dl>
+	<form asp-action="Delete" asp-route-id="@Model.Id">
+		<input type="submit" value="Delete" class="btn btn-danger">
+		<a asp-action="Index">Regresar al Index</a>
+	</form>
+</div>

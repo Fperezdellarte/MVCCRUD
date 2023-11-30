@@ -1,0 +1,37 @@
+﻿@model List<MVCCRUD.DTO.SocioDTO>
+
+	<h1>Socios</h1>
+	<p>
+		<a asp-action="Create">Crear nuevo producto</a>
+
+	</p>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>FechaIngreso</th>
+				<th>Dni</th>
+			<th>Opciones administrador</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem=>item.Nombre)
+					</td>
+				<td>
+					@Html.DisplayFor(modelItem=>item.FechaIngreso)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem=>item.Dni)
+				</td>
+				<td>
+					<a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.Id">Editar</a>
+					<a asp-action="Delete" class="btn btn-dark" asp-route-id="@item.Id">Eliminar</a>
+				</td>
+				</tr>
+			}
+		</tbody>
+	</table>

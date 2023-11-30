@@ -1,0 +1,37 @@
+﻿@model List<MVCCRUD.DTO.ClaseDTO>
+
+<h1>Clases</h1>
+<p>
+	<a asp-action="Create">Crear nueva clase</a>
+
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Profesor</th>
+			<th>DiaClase</th>
+			<th>Opciones administrador</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Nombre)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Profesor)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.DiaClase)
+				</td>
+				<td>
+					<a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.Id">Editar</a>
+					<a asp-action="Delete" class="btn btn-dark" asp-route-id="@item.Id">Eliminar</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

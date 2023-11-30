@@ -1,0 +1,26 @@
+﻿@model MVCCRUD.DTO.SocioDTO
+
+<h1>Eliminar socio</h1>
+
+<div>
+	<h4>Socio</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model=>model.Nombre)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model=>model.Nombre)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model=>model.Dni)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model=>model.Dni)
+		</dd>
+	</dl>
+	<form asp-action="Delete" asp-route-id="@Model.Id">
+		<input type="submit" value="Delete" class="btn btn-danger">
+		<a asp-action="Index">Regresar al Index</a>
+	</form>
+</div>
